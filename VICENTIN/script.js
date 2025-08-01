@@ -14,8 +14,13 @@ function botaoMostraPalavrasChave(){
     let palavras = texto.split(/\P{L}+/u);
 
      let frenquencia = [];
-     for(let i in palavras){
+     for(let i of palavras){
  frenquencia [i] = 0;
+ for (let j of palavras){
+    if (palavras[i]==palavras[j]){
+        frenquencia[i]++;
+    }
+ }
  }
 
  console.log(frenquencia);
