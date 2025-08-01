@@ -10,8 +10,16 @@ function botaoMostraPalavrasChave(){
     campoResultado.textContent = palavraschave.join(", ");
     }
 
-    function processaTexto(texto){
- let palvras = texto.split(/\P{L}+/u);
-return palvras;
+   function processaTexto(texto) {
+    let palavras = texto.split(/\P{L}+/u);
 
-    } 
+     let frenquencia = [];
+     for(let i in palavras){
+ frenquencia [i] = 0;
+ }
+
+ console.log(frenquencia);
+
+
+    return palavras;
+}
